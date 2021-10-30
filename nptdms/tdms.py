@@ -620,7 +620,7 @@ class TdmsChannel(object):
 
         try:
             increment = self.properties['wf_increment']
-            offset = self.properties['wf_start_offset']
+            offset = self.properties.get('wf_start_offset', 0)
         except KeyError:
             raise KeyError("Object does not have time properties available.")
 
