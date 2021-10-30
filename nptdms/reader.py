@@ -251,7 +251,7 @@ class TdmsReader(object):
         if tag == b'':
             raise EOFError
         if tag != expected_tag:
-            raise ValueError(
+            print(
                 "Segment does not start with %r, but with %r" % (expected_tag, tag))
 
         # Next four bytes are table of contents mask
