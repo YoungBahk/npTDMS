@@ -243,7 +243,7 @@ class TdmsReader(object):
         return segment, properties
 
     def _read_lead_in(self, file, segment_position, is_index_file=False):
-        file.seek(0)
+        # file.seek(0)
         lead_in_bytes = file.read(28)
 
         expected_tag = b'TDSh' if is_index_file else b'TDSm'
